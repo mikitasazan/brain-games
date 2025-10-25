@@ -1,7 +1,9 @@
 #!/usr/bin/env node
 
-import BrainGames from './brain-games.js';
+import brainGames from './brain-games.js'
+import { evenGame } from '../src/games/index.js'
 
-const brainGames = new BrainGames();
-
-brainGames.evenGame();
+brainGames.startGame(
+  evenGame,
+  'Answer "yes" if the number is even, otherwise answer "no".',
+)

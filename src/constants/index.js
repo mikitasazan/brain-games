@@ -1,1 +1,1 @@
-export * from './mainConstants.js';
+export * from './mainConstants.js'

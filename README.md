@@ -1,6 +1,31 @@
-### Hexlet tests and linter status:
-[![Actions Status](https://github.com/sazanik/backend-project-lvl1/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/sazanik/backend-project-lvl1/actions)
+# Brain Games
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/33bad7646aa4a2a98d3e/maintainability)](https://codeclimate.com/github/sazanik/backend-project-lvl1/maintainability)
+[![Actions Status](https://github.com/mikitasazan/brain-games/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/mikitasazan/brain-games/actions)
+[![Maintainability](https://qlty.sh/gh/mikitasazan/projects/brain-games/maintainability.svg)](https://qlty.sh/gh/mikitasazan/projects/brain-games)
 
-[![asciicast](https://asciinema.org/a/NHYTq1gdMy5sydEDQ1CL5RzEV.svg)](https://asciinema.org/a/NHYTq1gdMy5sydEDQ1CL5RzEV)
+Five console mini-games to train your brain with math and logic puzzles.
+
+## Games
+
+- **brain-even** — Determine if number is even
+- **brain-calc** — Solve arithmetic expressions
+- **brain-gcd** — Find greatest common divisor
+- **brain-progression** — Find missing number in sequence
+- **brain-prime** — Identify prime numbers
+
+## Installation
+
+```bash
+make install
+make link
+```
+
+## Usage
+
+```bash
+brain-even
+```
+
+## Demo
+
+[![asciicast](https://asciinema.org/a/kkmfRWa5FV7vDonXujHzsMaIi.svg)](https://asciinema.org/a/kkmfRWa5FV7vDonXujHzsMaIi)

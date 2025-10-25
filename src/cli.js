@@ -1,44 +1,42 @@
-import readlineSync from 'readline-sync';
+import readlineSync from 'readline-sync'
 
-import evenCheck from './utils/evenCheck.js';
-import {
-  ANSWER_TO_BOOLEAN_MAP,
-  BOOLEAN_TO_ANSWER_MAP,
-} from './constants/index.js';
+const askQuestion = (text) => {
+  console.log(`Question: ${text}`)
+}
+
+const getAnswer = text => readlineSync.question(text)
 
 const askAndGetName = () => {
-  console.log('Welcome to the Brain Games');
+  console.log('Welcome to the Brain Games!')
 
-  const name = readlineSync.question('May I have your name? ');
+  const name = getAnswer('May I have your name? ')
 
-  console.log(`Hello, ${name}!`);
+  console.log(`Hello, ${name}!`)
 
-  return name;
-};
+  return name
+}
 
 const congratulate = (name) => {
-  console.log(`Congratulations, ${name}!`);
-};
+  console.log(`Congratulations, ${name}!`)
+}
 
-const askNumIsEven = (num) => {
-  console.log(`Question: ${num}`);
+const sympathize = (name) => {
+  console.log(`Let's try again, ${name}!`)
+}
 
-  const isNumEven = evenCheck(num);
-  const userAnswer = readlineSync.question('Your answer: ');
-  const rightAnswer = BOOLEAN_TO_ANSWER_MAP[isNumEven];
-  const isAnswerAvailable = (ANSWER_TO_BOOLEAN_MAP[userAnswer] !== undefined);
+const getResponseAfterRound = (condition, userAnswer, rightAnswer) => {
+  if (!condition) {
+    return `${userAnswer} is wrong answer ;(. Correct answer was ${rightAnswer}.`
+  }
 
-  const isUserRight = isAnswerAvailable
-    && ((isNumEven && ANSWER_TO_BOOLEAN_MAP[userAnswer])
-      || (!isNumEven && !ANSWER_TO_BOOLEAN_MAP[userAnswer]));
+  return 'Correct!'
+}
 
-  const resultString = isUserRight
-    ? 'Correct!'
-    : `${userAnswer} is wrong answer ;(. Correct answer was ${rightAnswer}.`;
-
-  console.log(resultString);
-
-  return isUserRight;
-};
-
-export { askAndGetName, askNumIsEven, congratulate };
+export {
+  askQuestion,
+  getAnswer,
+  askAndGetName,
+  getResponseAfterRound,
+  congratulate,
+  sympathize,
+}
